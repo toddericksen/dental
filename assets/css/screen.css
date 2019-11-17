@@ -696,7 +696,7 @@ header .rating-billboard span.number {
   color: #fff;
 }
 .aside {
-  width:30%;
+  min-width:30%;
   margin: 1rem 2rem 2rem 0;
   float: left;
 }
