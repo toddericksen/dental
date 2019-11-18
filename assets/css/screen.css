@@ -1,4 +1,4 @@
-html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,time, mark, audio, video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section{display:block;}body{line-height:1;}ol, ul{list-style:none;}blockquote, q{quotes:none;}blockquote:before, blockquote:after,q:before, q:after{content:'';content:none;}table{border-collapse:collapse;border-spacing:0;}
+html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav.desktop, output, ruby, section, summary,time, mark, audio, video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav.desktop, section{display:block;}body{line-height:1;}ol, ul{list-style:none;}blockquote, q{quotes:none;}blockquote:before, blockquote:after,q:before, q:after{content:'';content:none;}table{border-collapse:collapse;border-spacing:0;}
 
 body {
   font-family: 'Montserrat Light';
@@ -108,32 +108,46 @@ label {
   color: #777;
 }
 
-nav {
+nav.desktop {
   position: relative;
   background: none;
   height: 0;
 }
 
-nav a {
+nav.desktop a {
+  position: absolute;
+  top:-.2rem;
   color: #fff;
   text-decoration: none;
   text-transform: uppercase;
   font-size: .9rem;
   font-weight: 700;
-  letter-spacing: .1rem
+  letter-spacing: .1rem;
+  padding: .3rem 1.3rem;
+  border-radius: 3rem;
 }
 
-nav a#homeLink{
-  position: absolute;
-  top: 0;
-  left: 20px;
+nav.desktop a.active, nav.desktop a:hover {
+  background: rgba(255,255,255,.25);
 }
 
-nav a#menuLink{
-  position: absolute;
-  top: 0;
-  right: 20px;
+
+nav.desktop a#homeLink{
+  left: calc(50% - 450px);
 }
+
+nav.desktop a#servicesLink{
+  left: calc(50% - 325px);
+}
+
+nav.desktop a#reviewsLink{
+  right: calc(50% - 310px);
+}
+
+nav.desktop a#storiesLink{
+  right: calc(50% - 450px);  
+}
+
 
 .phone-number {
   color: #fff;
@@ -223,7 +237,7 @@ nav a#menuLink{
 
 .logo:before {
   content: "";
-  background: rgba(255,255,255,.5);
+  background: rgba(255,255,255,.35);
   height: 1px;
   position: absolute;
   top: calc(1rem + 45px);
@@ -234,7 +248,7 @@ nav a#menuLink{
 
 .logo:after {
   content: "";
-  background: rgba(255,255,255,.5);
+  background: rgba(255,255,255,.35);
   height: 1px;
   position: absolute;
   top: calc(1rem + 45px);
@@ -737,6 +751,11 @@ header .rating-billboard span.number {
   margin-left: .25rem
 }
 
+nav.mobile ul{
+  display: none;
+}
+
+
 @media (min-width: 801px) {
   .three-up {
     width: 23%;
@@ -745,6 +764,22 @@ header .rating-billboard span.number {
 }
 
 @media (min-width: 601px) and (max-width: 800px)  {
+  nav.desktop a#homeLink{
+  left: 0;
+}
+
+nav.desktop a#servicesLink{
+  left: 100px;
+}
+
+nav.desktop a#reviewsLink{
+  right: 100px;
+}
+
+nav.desktop a#storiesLink{
+  right: 0;  
+}
+
   .three-up {
     padding: 1.5rem;
     top: -4rem;
@@ -777,6 +812,54 @@ header .rating-billboard span.number {
 }
 
 @media (max-width: 600px) {
+  nav.desktop a#storiesLink, nav.desktop a#reviewsLink, nav.desktop a#servicesLink, nav.desktop a#homeLink {
+    display: none;
+  }
+  
+  nav.mobile #menu {
+    position: absolute;
+    top: 0;
+    right: 1px;
+    background: #fff;
+    padding: 1.1rem 2rem;
+    z-index: 3;
+    text-decoration: none;
+  }
+
+  nav.mobile ul {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 1px;
+    width: 300px;
+    z-index: 2;
+    margin: 4rem 0 0 0;
+  }
+
+  nav.mobile li {
+    margin: 0;
+  }
+  
+  nav.mobile li a {
+    background: #fff;
+    display: block;
+    text-align: left;
+    border-top: 1px solid #ccc;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+  }
+
+  nav.mobile li:nth-child(1) a {
+    border-top: 0px solid #000;
+    border-radius: .5rem 0 0 0
+  }
+
+  nav.mobile li:nth-child(4) a {
+    border-radius: 0 0 .5rem .5rem;
+  }
+
   .review {
     width: auto;
   }
