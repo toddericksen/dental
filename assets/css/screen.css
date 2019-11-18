@@ -1,7 +1,7 @@
 html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav.desktop, output, ruby, section, summary,time, mark, audio, video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav.desktop, section{display:block;}body{line-height:1;}ol, ul{list-style:none;}blockquote, q{quotes:none;}blockquote:before, blockquote:after,q:before, q:after{content:'';content:none;}table{border-collapse:collapse;border-spacing:0;}
 
 body {
-  font-family: 'Montserrat Light';
+  font-family: 'Montserrat';
   font-weight: 300;
   font-size: 17px;
   line-height: 1.75;
@@ -265,47 +265,6 @@ header {
   padding: 1rem 0;
   text-align: center;
   position: relative;
-}
-
-.home header {
-  margin-bottom:-6rem;
-  padding: 1rem 0 5rem;
-  background: linear-gradient(
-      rgba(2,30,86,.65), 
-      rgba(2,30,86,.75)
-    ),  url(../images/home-img.png) no-repeat 50% 0; 
-  background-size: cover;
-  background-position: 100% 0;
-}
-
-.reviews header {
-  padding: 1rem 0;
-  background: linear-gradient(
-      rgba(2,30,86,.65), 
-      rgba(2,30,86,.75)
-    ),  url(../images/reviews-img.png) no-repeat 50% 0; 
-  background-size: cover;
-  background-position: 100% 0;
-}
-
-.services header {
-  padding: 1rem 0;
-  background: linear-gradient(
-      rgba(2,30,86,.65), 
-      rgba(2,30,86,.75)
-    ),  url(../images/services-img.png) no-repeat 50% 0; 
-  background-size: cover;
-  background-position: 100% 0;
-}
-
-.plan header {
-  padding: 1rem 0;
-  background: linear-gradient(
-      rgba(2,30,86,.65), 
-      rgba(2,30,86,.75)
-    ),  url(../images/plan-img.png) no-repeat 50% 0; 
-  background-size: cover;
-  background-position: 100% 0;
 }
 
 header p {
@@ -832,6 +791,47 @@ nav.mobile ul{
 
 
 @media (min-width: 801px) {
+  .home header {
+  margin-bottom:-6rem;
+  padding: 1rem 0 5rem;
+  background: linear-gradient(
+      rgba(2,30,86,.65), 
+      rgba(2,30,86,.75)
+    ),  url(../images/home-img.png) no-repeat 50% 0; 
+  background-size: cover;
+  background-position: 100% 0;
+}
+
+.reviews header {
+  padding: 1rem 0;
+  background: linear-gradient(
+      rgba(2,30,86,.65), 
+      rgba(2,30,86,.75)
+    ),  url(../images/reviews-img.png) no-repeat 50% 0;
+  background-size: cover;
+  background-position: 100% 0; 
+}
+
+.services header {
+  padding: 1rem 0;
+  background: linear-gradient(
+      rgba(2,30,86,.65), 
+      rgba(2,30,86,.75)
+    ),  url(../images/services-img.png) no-repeat 50% 0; 
+  background-size: cover;
+  background-position: 100% 0;
+}
+
+.plan header {
+  padding: 1rem 0;
+  background: linear-gradient(
+      rgba(2,30,86,.65), 
+      rgba(2,30,86,.75)
+    ),  url(../images/plan-img.png) no-repeat 50% 0;
+  background-size: cover;
+  background-position: 100% 0; 
+}
+
   .three-up {
     width: 23%;
     padding: 3rem 2rem;
@@ -995,5 +995,41 @@ nav.desktop a#storiesLink{
 
   .lead-story .story-image {
     display: none;
+  }
+
+  .home header {
+    background: linear-gradient(
+      rgba(2,30,86,.65), 
+      rgba(2,30,86,.75)
+    ),  url(../images/home-img-small.png) no-repeat 50% 0; 
+    background-size: cover;
+      background-position: 100% 0;
+  }
+
+  .reviews header {
+    background: linear-gradient(
+        rgba(2,30,86,.65), 
+        rgba(2,30,86,.75)
+      ),  url(../images/reviews-img-small.png) no-repeat 50% 0; 
+    background-size: cover;
+      background-position: 100% 0;
+  }
+
+  .services header {
+    background: linear-gradient(
+        rgba(2,30,86,.65), 
+        rgba(2,30,86,.75)
+      ),  url(../images/services-img-small.png) no-repeat 50% 0; 
+    background-size: cover;
+      background-position: 100% 0;
+  }
+
+  .plan header {
+    background: linear-gradient(
+        rgba(2,30,86,.65), 
+        rgba(2,30,86,.75)
+      ),  url(../images/plan-img-small.png) no-repeat 50% 0; 
+    background-size: cover;
+      background-position: 100% 0;
   }
 }
