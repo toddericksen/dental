@@ -15,7 +15,12 @@
         <a href="stories.html" id="storiesLink">Stories</a>
       </nav>
       <nav class="mobile">
-        <a id="menu" href="index.html">|||</a>
+        <div id="nav-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="reviews.html">Reviews</a></li>
@@ -23,7 +28,12 @@
           <li><a href="stories.html">Stories</a></li>
         </ul>
       </nav>
-
+      <script type="text/javascript">
+        var nav = document.getElementById("nav-icon");
+        nav.onclick = function() {
+         nav.classList.toggle('open');
+        }
+      </script>
         <div class="logo">
           <img src="assets/images/ericksen-dental-logo.svg" height="75" alt="ericksen dental logo" />
         </div>
