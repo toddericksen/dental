@@ -72,6 +72,10 @@ li {
   line-height: 1.5
 }
 
+img {
+  max-width: 100%;
+}
+
 input[type="text"],
 input[type="date"],
 input[type="datetime"],
@@ -200,14 +204,14 @@ nav.desktop a#storiesLink{
 .teal {
   color:#fff;
   background: #1EBAAA;
-  padding: 5rem 0;
+  padding: 5rem 1rem;
   position: relative;
 }
 
 .slate {
   color:#fff;
   background: #6A7C90;
-  padding: 5rem 0;
+  padding: 5rem 1rem;
   position: relative;
 }
 
@@ -502,31 +506,6 @@ header .rating-billboard span.number {
 .mobile {display: none;}
 .desktop {display: block;}
 
-.main-content { 
-  padding: 0 15rem 0 10px;
-  /*background: yellow; */
-}
-
-.sidebar { 
-  position: absolute; 
-  right: 0; 
-  top: 0; 
-  width: 15rem; 
-  bottom: 0%;
-  padding: 0; 
-  font-size: .9rem;
-  /*background: pink*/
-}
-.sidebar ul a:link, .sidebar ul a:visited {
-  text-decoration: none;
-  display: block; 
-  font-weight: 400;
-  color: #014283;
-}
-.sidebar ul ul a:link, .sidebar ul ul a:visited {
-  font-weight: 300;
-  color: #0197D8;
-}
 
 
 .story {
@@ -671,11 +650,11 @@ header .rating-billboard span.number {
 .aside {
   text-align: center;
   min-width:30%;
-  margin: 1rem 2rem 2rem 0;
+  margin: 1rem 2rem 1rem 0;
   float: left;
 }
 .aside.right {
-  margin-bottom:  2rem;
+  margin-bottom:  1rem;
   margin-left: 3rem;
   float: right;
 }
@@ -716,14 +695,14 @@ nav.mobile ul{
 
 #nav-icon {
   position: absolute;
-    top: 12px;
-    right: 12px;
+  top: 10px;
+  right: 5px;
   width: 60px;
   height: 36px;
-  -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-  -o-transform: rotate(0deg);
-  transform: rotate(0deg);
+  -webkit-transform: rotate(0deg) scale(0.7);
+  -moz-transform: rotate(0deg) scale(0.7);
+  -o-transform: rotate(0deg) scale(0.7);
+  transform: rotate(0deg) scale(0.7);
   -webkit-transition: .5s ease-in-out;
   -moz-transition: .5s ease-in-out;
   -o-transition: .5s ease-in-out;
@@ -789,8 +768,6 @@ nav.mobile ul{
   left: 50%;
 }
 
-
-@media (min-width: 801px) {
   .home header {
   margin-bottom:-6rem;
   padding: 1rem 0 5rem;
@@ -832,10 +809,123 @@ nav.mobile ul{
   background-position: 100% 0; 
 }
 
+.main-content { 
+  padding: 4rem 0 0 0 ;
+}
+
+.sidebar { 
+  position: absolute; 
+  font-size: .9rem;
+  right: calc(50% - 8.5rem); 
+  top: 0; 
+  z-index: 1
+}
+.sidebar ul {
+  background: #fff;
+  height: 0;
+  overflow: hidden;
+  width: 13rem; 
+  padding: 2rem; 
+  opacity: 0;
+  transition: opacity 200ms 0ms ease-in-out;
+}
+
+.sidebar a.open + ul {
+  height: auto;
+  box-shadow: 0px 2px 14px rgba(0, 0, 0, 0.19);
+  opacity: 1;
+  transition: opacity 300ms 150ms ease-in-out;
+}
+.sidebar a.open + ul ul {
+  box-shadow: none;
+  padding: 0;
+  height: auto;
+  opacity: 1;
+  transition: opacity 600ms ease-in-out;
+}
+
+.sidebar ul a:link, .sidebar ul a:visited {
+  text-decoration: none;
+  display: block; 
+  font-weight: 400;
+  color: #014283;
+}
+
+.sidebar ul ul a:link, .sidebar ul ul a:visited {
+  font-weight: 300;
+  color: #0197D8;
+}
+
+.sidebar #menuTrigger {
+  display: block;
+  position: relative;
+  width: 15rem;
+  margin: 0 auto;
+  text-align: center;
+  background: #fff;
+  padding: 1rem;
+  border-radius: .5rem;
+  background: #1EBAAA;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 200ms ease-in-out;
+}
+
+.sidebar #menuTrigger.open {
+  border-radius: 1rem 1rem 0 0;
+    transition: all 200ms ease-in-out;
+
+}
+
+footer a {
+  color: #fff;
+}
+
+
+
+
+@media (min-width: 801px) {
+  .sidebar {
+    right: 1rem;
+  }
+
+  .sidebar ul {
+    display: block;
+    padding: 0;
+    height: auto;
+    opacity: 1;
+  }
+
+  .sidebar.open ul {
+    box-shadow: 0 0 0 #000;
+  }
   .three-up {
     width: 23%;
     padding: 3rem 2rem;
   }
+
+  .sidebar #menuTrigger {
+    display: none;
+  }
+
+  .main-content { 
+    padding: 0 15rem 0 10px;
+  }
+
+  .sidebar ul a:link, .sidebar ul a:visited {
+    text-decoration: none;
+    display: block; 
+    font-weight: 400;
+    color: #014283;
+  }
+  .sidebar ul ul a:link, .sidebar ul ul a:visited {
+    font-weight: 300;
+    color: #0197D8;
+  }
+
+
+
 }
 
 @media (min-width: 601px) and (max-width: 800px)  {
@@ -887,6 +977,9 @@ nav.desktop a#storiesLink{
 }
 
 @media (max-width: 600px) {
+
+
+
   nav.desktop a#storiesLink, nav.desktop a#reviewsLink, nav.desktop a#servicesLink, nav.desktop a#homeLink {
     display: none;
   }
@@ -905,6 +998,7 @@ nav.desktop a#storiesLink{
   #nav-icon.open + ul {
     transform: translateY(0%);
     transition: transform 200ms ease;
+    box-shadow: 0 0 20px rgba(0,0,0,.5);
   }
 
   nav.mobile li {
@@ -972,7 +1066,7 @@ nav.desktop a#storiesLink{
 
   .three-up:nth-child(3) {
     margin-bottom: 0rem;
-}
+  }
   .container {
     margin: 2rem auto 3rem;
   }
@@ -1031,5 +1125,21 @@ nav.desktop a#storiesLink{
       ),  url(../images/plan-img-small.png) no-repeat 50% 0; 
     background-size: cover;
       background-position: 100% 0;
+  }
+  .aside {width: 100%; margin-right: 0;}
+  .aside.right {
+    margin-left: 0;
+    float: none;
+  }
+  .rating-billboard span.total, .rating-billboard span.add-review {
+    margin-right:0;
+  }
+  .rating-billboard {margin-bottom: 3rem;}
+  .pull-up {
+    margin-top:0;
+  }
+  .columns {
+    column-count: 1;
+    column-gap: 0;
   }
 }

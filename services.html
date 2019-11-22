@@ -28,12 +28,6 @@
           <li><a href="stories.html">Stories</a></li>
         </ul>
       </nav>
-      <script type="text/javascript">
-        var nav = document.getElementById("nav-icon");
-        nav.onclick = function() {
-         nav.classList.toggle('open');
-        }
-      </script>
       <div class="logo">
         <img src="assets/images/ericksen-dental-logo.svg" height="75" alt="Ericksen Dental" />
       </div>
@@ -60,25 +54,13 @@
     </header>
 
     <div class="container">
-      <div class="main-content">
-      <h2>Cleaning and prevention</h2>
-
-      <p>A focus on preventive dentistry helps you maintain the highest standard of oral health while limiting dental expenditures. A partnership between you and our team pays dividends, protecting your smile now and well into the future.</p>
-
-<p>At home, prevention may include brushing and flossing twice a day. But many strategies and oral health aids exist that may fit your situation even better. Often patients are surprised to learn that a particular toothpaste, rinse, or specialized toothpick will serve them best and make all the difference in their efforts. Our team can help customize solutions that enhance your daily efforts, often turning frustration into smiles at the healthy changes that occur.
-</p>
-
-<p>Your diet plays a critical role in oral health as well. Acidic foods and drinks can accelerate deterioration of your teeth, and certain foods can enhance the health of your supporting jawbone and gums. Our team believes in bringing your efforts and ours into balance for optimum health.
-</p>
-
-<p>
-And of course, regular dental exams and cleanings prove vital in preventing decay and gum disease as you keep daily habits consistent. With a proactive approach, together we can prevent minor issues from becoming major procedures.
-</p>
-
-<h2>Oral Cancer Screening</h2>
-<p>Every time you’re in our chair, we review many aspects of your health. Subtle changes in the lining of your mouth call for a closer evaluation, regardless of whether you use tobacco or not. Early detection of oral cancer saves many lives every year, and we’re trained to recognize a myriad of oral tissue abnormalities.</p>
-    </div>
-    <div class="sidebar">
+         <div class="sidebar">
+          <a href="#false" id="menuTrigger">
+            Select a Service &nbsp;
+            <svg width="13" height="7" viewBox="0 0 13 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 1L6.5 6L1 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
       <ul>
         <li>
           <a href="#">Cleaning and Prevention</a>
@@ -121,6 +103,25 @@ And of course, regular dental exams and cleanings prove vital in preventing deca
         </li>
       </ul>
     </div>
+      <div class="main-content">
+      <h2>Cleaning and prevention</h2>
+
+      <p>A focus on preventive dentistry helps you maintain the highest standard of oral health while limiting dental expenditures. A partnership between you and our team pays dividends, protecting your smile now and well into the future.</p>
+
+<p>At home, prevention may include brushing and flossing twice a day. But many strategies and oral health aids exist that may fit your situation even better. Often patients are surprised to learn that a particular toothpaste, rinse, or specialized toothpick will serve them best and make all the difference in their efforts. Our team can help customize solutions that enhance your daily efforts, often turning frustration into smiles at the healthy changes that occur.
+</p>
+
+<p>Your diet plays a critical role in oral health as well. Acidic foods and drinks can accelerate deterioration of your teeth, and certain foods can enhance the health of your supporting jawbone and gums. Our team believes in bringing your efforts and ours into balance for optimum health.
+</p>
+
+<p>
+And of course, regular dental exams and cleanings prove vital in preventing decay and gum disease as you keep daily habits consistent. With a proactive approach, together we can prevent minor issues from becoming major procedures.
+</p>
+
+<h2>Oral Cancer Screening</h2>
+<p>Every time you’re in our chair, we review many aspects of your health. Subtle changes in the lining of your mouth call for a closer evaluation, regardless of whether you use tobacco or not. Early detection of oral cancer saves many lives every year, and we’re trained to recognize a myriad of oral tissue abnormalities.</p>
+    </div>
+ 
     </div>
         
 
@@ -137,13 +138,30 @@ And of course, regular dental exams and cleanings prove vital in preventing deca
         </p>
       </div>
     </div>
-    <div class="slate">
+<div class="slate">
       <div class="container centered">
+        <footer>
        <img class="logo" src="assets/images/ericksen-dental-logo.svg" height="75" alt="Urban" />
-        <p>Home | About Dr. Ericksen | Dental Services | Patient Information | Emergencies | Contact Us | Privacy Policy
+        <p>
+          <a href="index.html">Home</a> &nbsp; <a href="services.html">Dental Services</a> &nbsp; <a href="reviews.html">Reviews</a> &nbsp; <a href="stories.html">Stories</a>
+        </p>
+        <p>
 Phone: 480-644-7777 | Email: info@ericksendental.com | Address: 1010 E. University Dr., Mesa AZ 85203
 ©2011-2014 Dr. David R. Ericksen DDS. All rights reserved. </p>
+</footer>
      </div>
    </div>
+   <script type="text/javascript">
+    var nav = document.getElementById("nav-icon");
+    nav.onclick = function() {
+     nav.classList.toggle('open');
+    }
+    var menu = document.getElementById("menuTrigger");
+    menu.onclick = function() {
+     menu.classList.toggle('open');
+    }
+
+
+      </script>
   </body>
 </html>
