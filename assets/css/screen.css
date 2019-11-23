@@ -804,7 +804,7 @@ nav.mobile ul{
   background: linear-gradient(
       rgba(2,30,86,.65), 
       rgba(2,30,86,.75)
-    ),  url(../images/plan-img.png) no-repeat 50% 0;
+    ),  url(../images/plan-img.jpg) no-repeat 50% 0;
   background-size: cover;
   background-position: 100% 0; 
 }
